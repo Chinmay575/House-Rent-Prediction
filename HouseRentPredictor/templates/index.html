@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<link rel="stylesheet" href= {% static 'style2.css' %}>
+
+
+<!-- <a href="https://www.flaticon.com/free-icons/house" title="house icons">House icons created by Freepik - Flaticon</a> -->
+{% block body %}
+<center><h2>Welcome to House Rent Predictor !!</h2></center>
+    <div class="container">
+        <div class="image">
+        <img src= {%static 'img2.jpg' %} alt="Descriptive alt text" class="side-image">
+        </div>
+        <div class="text">
+                <p>
+                    <i>Our user-friendly platform saves you time and energy by providing accurate rental predictions tailored to your preferences.
+                    <br>"A house is made of walls and beams; a home is built with love and dreams."
+                    </i>
+                    <br> - Ralph Waldo Emerson
+                    <br>
+                    <br>Start Your Journey Today!
+                    <br><br>
+                    <a href="{% url 'predictor' %}">
+                        <button type="button">Predict House Rent</button>
+                    </a>
+                    
+                </p>
+        </div>
+    </div>
+
+    {% endblock body %}

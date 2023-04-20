@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>{% block title %}{% endblock title %} House Rent Predictor</title>
+        <link rel="stylesheet" href= {% static 'style2.css' %}>
+        {% comment %} <script src="https://kit.fontawesome.com/b26de30587.js" crossorigin="anonymous"></script> {% endcomment %}
+        <link rel="shortcut icon" href= {% static 'favicon.ico' %} type="image/png">
+    </head>
+    <body>
+        <nav>
+          <div class="logo">
+            <img src={% static '5161270.webp' %} alt="House Rent Prediction">
+            <span class ="name">House Rent Predictor</span>
+            </div>
+            <ul>
+              {% comment %} <li class="hash"><a href="#">House Rent Predictor</a></li> {% endcomment %}
+              <li><a href= {% url 'index' %}>Home</a></li>
+              <li><a href= {% url 'predictor' %}>Predict House Rent</a></li>
+              <li><a href= {% url 'about' %}>About</a></li>
+              <li><a href= {% url 'contact' %}>Contact</a></li>
+              
+            </ul>
+          </nav>
+        {% block body %}{% endblock body %}
+    </body>
+</html>

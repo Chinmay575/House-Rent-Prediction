@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+<link rel="stylesheet" href= {% static 'style2.css' %}>
+{% block body %}
+<div class="about">
+    <h1>About This Project</h1>
+    <p>House Rent Prediction is an innovative and practical application of machine learning algorithms that helps predict the rental prices of houses. This web-based solution involves collecting data on various factors that influence house rents, such as location, size of the house, number of bedrooms, and proximity to essential amenities like schools and hospitals.</p>
+    <p>With a focus on providing users with accurate and reliable predictions, I have developed a machine learning model that can be trained on this data. The model is constantly improved by using advanced techniques such as feature engineering, hyperparameter tuning, and cross-validation, ensuring that our predictions are as accurate as possible.</p>
+    <p>My application is beneficial to both landlords and tenants, providing valuable insights into the rental market and helping them make informed decisions. For example, landlords can use this service to determine the most appropriate rental prices for their properties, while tenants can use it to search for houses that fit their budget.</p>
+    <p>In addition to the core functionality of house rent prediction, I also plan to expand our application to include other factors that may affect house rents, such as crime rates and economic conditions. This will further enhance the accuracy and usefulness of this application.</p>
+    {% comment %} <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel eros non nisi posuere ultricies sit amet sit amet nisl. Praesent efficitur mi sapien, vel hendrerit tellus lacinia a. Praesent nec neque et risus consequat venenatis ac vel velit. Sed imperdiet ex eget tortor placerat faucibus. Nam eleifend libero nec justo fringilla, vel aliquet risus maximus. Vestibulum congue, sem in gravida consequat, sapien nunc commodo sapien, ut consectetur orci velit nec velit.</p> {% endcomment %}
+    <div class="cen-para">
+      <p>Below are some useful links related to this project:</p>
+    </div>
+    <div class="social-links">    
+        <a href= {%url 'notebook'%} ><img src="/static/images/github.svg"></a>
+        <a href= {%url 'dataset'%} ><img src="/static/images/kaggle.svg"></a>
+        <a href="/static/files/ML II Assignment.pdf"><img src="/static/images/file-pdf.svg"></a>
+      </div>
+</div>
+
+{% endblock body %}
+

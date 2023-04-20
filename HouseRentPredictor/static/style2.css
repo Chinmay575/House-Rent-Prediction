@@ -1,0 +1,231 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #000000;
+}
+
+nav {
+    background-color: #ffffff;
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+nav .logo .name {
+    font-size: 1.2rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: #333;
+    color: #f2f2f2;
+}
+
+form {
+    border: 2px solid rgb(4, 4, 4);
+    border-radius: 20px;
+    padding: 30px;
+    align-content: center;
+    width: 500px;
+    margin: 100px auto;
+    font-family: sans-serif;
+    color: rgb(2, 2, 2);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #15f900;
+    color: black;
+}
+
+p {
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+a img {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    background-color: #ffffff;
+}
+
+.image {
+    width: 50%;
+    margin-right: 2%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.text {
+    width: 48%;
+}
+
+button
+{
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-color: #ffffff;
+}
+
+.content {
+    text-align: center;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-links img {
+    width: 50px;
+    height: 50px;
+}
+
+
+.about {
+    max-width: fit-content;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.about h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.about p {
+    text-align: left;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.cen-para p
+{
+    text-align: center;
+}
+
+.about ul {
+    margin-bottom: 1.5rem;
+}
+
+.about ul li {
+    margin-bottom: 1rem;
+}
+
+.about ul li a {
+    color: #007bff;
+}

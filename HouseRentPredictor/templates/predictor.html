@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<link rel="stylesheet" href= {% static 'style2.css' %}>
+
+
+<!-- <a href="https://www.flaticon.com/free-icons/house" title="house icons">House icons created by Freepik - Flaticon</a> -->
+{% block body %}   
+<div class="form-container">
+    <form action='/predict/' method='post'>
+        {% csrf_token %}
+        <div class="row">
+            <div class="col">
+                <div class="input-group">
+                    <label for="city">Preferred City:</label>
+                    <select id="city" name="city">
+                        <option value="" selected disabled hidden>City</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Kolkata">Kolkata</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Bangalore">Bangalore</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col">
+                <div class="input-group">
+                    <label for="area_type">Preferred Area Type:</label>
+                    <select id="area_type" name="area_type">
+                        <option value="" selected disabled hidden>Area Type</option>
+                        <option value="Super Area">Super Area</option>
+                        <option value="Built Area">Built Area</option>
+                        <option value="Carpet Area">Carpet Area</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col">
+                <div class="input-group">
+                    <label for="furnishing">Preferred Furnishing Type:</label>
+                    <select id="furnishing" name="furnishing">
+                        <option value="" selected disabled hidden>Furnishing</option>
+                        <option value="Furnished">Furnished</option>
+                        <option value="Semi-Furnished">Semi-Furnished</option>
+                        <option value="Unfurnished">Unfurnished</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <label for="bhk">Prefered BHK:</label>
+                <input type="number" id="bhk" min="1" max="8" name="bhk" placeholder="BHK" required>
+            </div>
+            <div>
+                <label for="floor_level">Prefered Floor Level:</label>
+                <input type="number" id="floor_level" min="-1" max="89" name="floor_level" placeholder="Floor Level" required>
+            </div>
+            <div>
+                <label for="bathrooms">Prefered No. of Bathrooms:</label>
+                <input type="number" id="bathrooms" name="bathrooms" min="1" max="10" placeholder="Bathrooms" required>
+            </div>
+            <div>
+                <label for="size">Prefered House Size:</label>
+                <input type="number" id="size" name="size" placeholder="House Size" min="10" max="8000" required>
+            </div>
+            <input type="submit" value="Predict Rent">
+        </div>
+    </form>
+</div>
+</div> 
+
+{% endblock body %}

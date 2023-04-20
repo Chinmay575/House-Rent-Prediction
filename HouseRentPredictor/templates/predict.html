@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% csrf_token %}
+
+{% load static %}
+
+<link rel="stylesheet" href= {% static 'style2.css' %}>
+
+{% block body %}
+<p>Predicted Rent: {{ result }}</p>
+{% endblock body %}
+
+
