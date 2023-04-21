@@ -50,7 +50,7 @@ def predict(request):
         size = int(size)
         val = np.array([[contact,city,bathrooms,bhk,size]])
         print(val)
-        file = "./model.pkl"
+        file = "../../model.pkl"
         with open(file, 'rb') as f:
             model = pickle.load(f)
 
