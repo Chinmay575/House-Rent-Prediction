@@ -50,21 +50,13 @@ def predict(request):
         size = int(size)
         val = np.array([[contact,city,bathrooms,bhk,size]])
         print(val)
-        file = "../../model.pkl"
+        file = "/home/chinmay/Downloads/HouseRentPrediction/HouseRentPredictor/model.pkl"
         with open(file, 'rb') as f:
             model = pickle.load(f)
-
-        # lam = -0.297859738284799
-        # model = my_model_object.model
-
         res = model.predict(val)
-        print(type(res))   
         result = np.expm1(res)
-        print(type(result))
-        # result = inv_boxcox(result,lam)
-        # result = "hello world"
         print("context result ->",*result)
-        context = {"result" : result}
+        context = {"result" : result[0]}
     return render(request,"predict.html",context)    
 
 def link2dataset(request):
